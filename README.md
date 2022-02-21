@@ -1,2 +1,2 @@
 # Ekoloji_Lab
-Ekoloji Laboratuvarı Uygulamaları
+Ekoloji Laboratuvarı Uygulamaları için R kodları
