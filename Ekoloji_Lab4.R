@@ -1,7 +1,4 @@
-set.seed(15)
-
-sample_1 <- sample(1:100,30,replace = TRUE)
-sample_1
+# Öncelikli olarak alan verisinin okunması
 
 alan_verisi <- read.csv2("Data/Alan_tablo.csv")
 

@@ -1,6 +1,6 @@
 
 # Verilerin yüklenmesi
-AB_data <- read.csv("Data/Data_agac.csv",header = TRUE,col.names = c("A","B"))
+AB_data <- read.csv2("Data/Data_agac.csv",header = TRUE,col.names = c("A","B"))
 AB_data
 
 # Verileri A ve B alanı olmak üzere iki kısma ayırın ve boş verileri atın (NA)
@@ -31,9 +31,6 @@ n_B <- length(alan_B)
 
 # T değerinin bulunması, Cohen'in değerine göre (uzun yol)
 
-d_value <-  (mean(alan_A)-mean(alan_B))/sqrt((var_A+var_B)^2)
-
-d_value
 
 t_value <- (mean(alan_A)-mean(alan_B))/sqrt((var_A/n_A+var_B/n_B))
 

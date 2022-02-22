@@ -21,7 +21,7 @@ summary(kuadrat_30)
 
 # Kuadrat verilerinin t testi ile karşılaştırılması
 
-t.test(kuadrat_10,kuadrat_30,alternative = "two sided", paired = FALSE)
+t.test(kuadrat_10,kuadrat_30,alternative = "two.sided", paired = FALSE)
 
 # Transekt verilerinin alınması
 
@@ -36,7 +36,7 @@ summary(transekt_6)
 
 # Transekt verilerinin t testi ile değerlendirilmesi
 
-t.test(transekt_3,transekt_6,alternative = "two sided", paired = FALSE)
+t.test(transekt_3,transekt_6,alternative = "two.sided", paired = FALSE)
 
 
 # 2. kısım Birleşik verilerin değerlendirilmesi
