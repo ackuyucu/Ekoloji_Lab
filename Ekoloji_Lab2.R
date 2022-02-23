@@ -1,5 +1,5 @@
 
-# Verilerin yüklenmesi
+# Verilerin yüklenmesi A alanı Lab B alanı Doga
 AB_data <- read.csv2("Data/Data_agac.csv",header = TRUE,col.names = c("A","B"))
 AB_data
 
