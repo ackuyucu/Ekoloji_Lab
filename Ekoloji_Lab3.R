@@ -4,6 +4,8 @@
 # dosyaya kaydedin
 
 # 1. kısım grup verilerinin değerlendirilmesi
+# Dikkat verileri okumadan önce labda elde ettiğiniz verileri
+# Data klasörü içindeki Ekoloji_lab3_veri.csv dosyasına kaydedin
 # Verilerin okunması
 
 orneklem_veri <- read.csv2("Data/Ekoloji_lab3_veri.csv")
