@@ -123,3 +123,21 @@ t.test(transekt_12_A,transekt_12_B,alternative = "two.sided", paired = FALSE)
 
 t.test(transekt_24_A,transekt_24_B, alternative = "two.sided", paired = FALSE)
 
+
+# Kendi verilerinizi birleşik tablo verileri ile karşılaştırın
+# A alanı için kuadrat verileri
+
+t.test(kuadrat_30,kuadrat_120_A, alternative = "two.sided", paired = FALSE)
+
+# B alanı için kuadrat verileri
+
+t.test(kuadrat_30,kuadrat_120_B, alternative = "two.sided", paired = FALSE)
+
+# A alanı için transekt verileri
+
+t.test(transekt_6,transekt_24_A, alternative = "two.sided", paired = FALSE)
+
+# B alanı için transekt verileri
+
+t.test(transekt_6,transekt_24_B, alternative = "two.sided", paired = FALSE)
+

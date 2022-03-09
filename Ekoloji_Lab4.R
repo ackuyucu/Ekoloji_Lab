@@ -1,10 +1,12 @@
-# Öncelikli olarak alan verisinin okunması
+# Öncelikli olarak alan verisinin okunması verilerinizi öncelikli olarak
+# Alan_tablo.csv içerisine kaydedin
+
 
 alan_verisi <- read.csv2("Data/Alan_tablo.csv")
 
 summary(alan_verisi)
 
-alan_tablo <- data.frame(table(alan_verisi$A))
+alan_tablo <- data.frame(table(alan_verisi$birey))
 
 alan_tablo <-  apply(as.matrix.noquote(alan_tablo),2, as.numeric)
 

@@ -47,13 +47,13 @@ Changing <- function(sample_size,freq_A,generations = 1:5){
         return(population)
 }
 
-pop_1 <- Changing(30,0.5,1:5)
+pop_1 <- Changing(1000,0.5,1:5)
 
 # Genotip sayılarının değişimi tablosu
 table_change <- table(pop_1$Inds,pop_1$Generation)
 table_change
 # Frekans olarak, /populasyon_büyüklüğü
-table_change/30 
+table_change/1000
 
 #Değişim Grafiği
 ggplot(pop_1,aes(x=Generation,fill = Inds)) +
