@@ -16,7 +16,7 @@ summary(balik_veri$VG_hamsi)
 summary(balik_veri$VU_istavrit)
 summary(balik_veri$VG_istavrit)
 
-# Histogram grafikleri
+
 
 # Hamsilerde vücut uzunluğu ve Vücut genişliği değerleri arasındaki korelasyon
 cor(balik_veri$VU_hamsi,balik_veri$VG_hamsi)
@@ -53,7 +53,7 @@ hist(balik_veri$VG_hamsi,xlab = "Sıklık", ylab = "Vucut genisligi (cm)",
 # 2. kısım birleşik verilerin değerlendirilmesi
 
 
-# Verilerin okunması
+# Verilerin okunması birleşik veri için
 balik_veri <- read.csv2("Data/Bolum5_birlesik.csv",header = TRUE,skip = 1)
 
 # Hamsi vücut uzunluğu ve Vücut genişliği değerlerinin özetlenmesi
@@ -70,7 +70,6 @@ summary(balik_veri$VG_hamsi)
 summary(balik_veri$VU_istavrit)
 summary(balik_veri$VG_istavrit)
 
-# Histogram grafikleri
 
 # Hamsilerde vücut uzunluğu ve Vücut genişliği değerleri arasındaki korelasyon
 cor(balik_veri$VU_hamsi,balik_veri$VG_hamsi)

@@ -34,7 +34,7 @@ pois_tablo <- matrix(nrow = kuad_s,ncol = 4,byrow = TRUE)
 
 pois_tablo[,1] <- alan_tablo[,1]
 
-pois_tablo[,2] <- (f_ort^(alan_tablo[,1])/(exp(1)^f_ort*factorial(alan_tablo[,1])))
+pois_tablo[,2] <- (f_ort^(alan_tablo[,1])/(exp(f_ort)*factorial(alan_tablo[,1])))
 
 pois_tablo[,3] <- pois_tablo[,2]*f_sum
 
