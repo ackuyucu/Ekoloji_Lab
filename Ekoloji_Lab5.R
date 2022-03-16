@@ -21,8 +21,12 @@ summary(balik_veri$VG_istavrit)
 # Hamsilerde vücut uzunluğu ve Vücut genişliği değerleri arasındaki korelasyon
 cor(balik_veri$VU_hamsi,balik_veri$VG_hamsi)
 
+cor.test(balik_veri$VU_hamsi,balik_veri$VG_hamsi)
+
 # İstavritlerde vücut uzunluğu ve Vücut genişliği değerleri arasındaki korelasyon
 cor(balik_veri$VU_istavrit,balik_veri$VG_istavrit)
+
+cor.test(balik_veri$VU_istavrit,balik_veri$VG_istavrit)
 
 # Hamsi ve İstavritlerin vücut uzunluğunun t testi ile karşılaştırılması
 
@@ -74,9 +78,12 @@ summary(balik_veri$VG_istavrit)
 # Hamsilerde vücut uzunluğu ve Vücut genişliği değerleri arasındaki korelasyon
 cor(balik_veri$VU_hamsi,balik_veri$VG_hamsi)
 
+cor.test(balik_veri$VU_hamsi,balik_veri$VG_hamsi)
+
 # İstavritlerde vücut uzunluğu ve Vücut genişliği değerleri arasındaki korelasyon
 cor(balik_veri$VU_istavrit,balik_veri$VG_istavrit)
 
+cor.test(balik_veri$VU_istavrit,balik_veri$VG_istavrit)
 # Hamsi ve İstavritlerin vücut uzunluğunun t testi ile karşılaştırılması
 
 t.test(balik_veri$VU_hamsi,balik_veri$VU_istavrit,alternative = "two.sided",
