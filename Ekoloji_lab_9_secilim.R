@@ -72,7 +72,7 @@ frequency <- function(pop,generation){
   
 }
 
-# Kullanacağımız fonkisyonları kodlamayı bitirdik
+# Kullanacağımız fonksiyonları kodlamayı bitirdik
 # Simulasyonların başlangıcı
 # Model 1 seçilimin olmadığı bir durumun modellenmesi tüm genotiplerin 
 # hayatta kalma olasılığı birbirine eşittir
@@ -99,7 +99,7 @@ ggplot(pop_1,aes(x=Generation,fill = Inds)) +
 
 # 5. kuşaktaki allel frekansları, A alleli ve a alleli
 freq_model_1 <- frequency(pop_1,5)
-print(freq_model_2)
+print(freq_model_1)
 
 
 
