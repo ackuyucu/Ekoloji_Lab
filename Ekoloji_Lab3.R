@@ -1,5 +1,25 @@
 # Ekoloji Lab 3 TEMEL ÖRNEKLEME YÖNTEMLERİ
 
+# Grup numaraniza gore set.seed() belirleyin
+
+set.seed(14)
+
+
+transekt_sample_3 <- sample(1:100,size = 3,replace = F)
+transekt_sample_6 <- sample(1:100, size = 6, replace = F)
+
+Kuadrat_sample_10 <- sample(1:100,size = 10,replace = F)
+Kuadrat_sample_30 <- sample(1:100,size = 30,replace = F)
+
+# Asagidaki Sayilari kaydedin
+transekt_sample_3
+
+transekt_sample_6
+
+Kuadrat_sample_10
+
+Kuadrat_sample_30
+
 # Bu çalışmada öncelikli olarak doldurduğunuz tabloları verilmiş olan .csv uzantılı
 # dosyaya kaydedin
 
@@ -8,7 +28,7 @@
 # Data klasörü içindeki Ekoloji_lab3_veri.csv dosyasına kaydedin
 # Verilerin okunması
 
-orneklem_veri <- read.csv2("Data/Ekoloji_lab3_veri.csv")
+orneklem_veri <- read.csv("Data/Ekoloji_lab3_veri.csv")
 
 # Kuadrat verilerinin alınması
 

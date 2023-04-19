@@ -2,7 +2,8 @@
 
 set.seed(14)
 
-Random_sample <- sample(1:100,size = 30,replace = T)
+Random_sample <- sample(1:100,size = 30,replace = F)
+
 # Asagidaki Sayilari kaydedin
 Random_sample
 
