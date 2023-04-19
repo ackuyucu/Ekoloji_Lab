@@ -1,12 +1,20 @@
+# Grup numaraniza gore set.seed() belirleyin
+
+set.seed(14)
+
+Random_sample <- sample(1:100,size = 30,replace = T)
+# Asagidaki Sayilari kaydedin
+Random_sample
+
 # Öncelikli olarak alan verisinin okunması verilerinizi öncelikli olarak
 # Alan_tablo.csv içerisine kaydedin
 
 
-alan_verisi <- read.csv2("Data/Alan_tablo.csv")
+alan_verisi <- read.csv("Data/Alan_tablo.csv")
 
 summary(alan_verisi)
 
-alan_tablo <- data.frame(table(alan_verisi$birey))
+alan_tablo <- data.frame(table(alan_verisi$Birey))
 
 alan_tablo <-  apply(as.matrix.noquote(alan_tablo),2, as.numeric)
 
@@ -44,3 +52,5 @@ pois_tablo[,4] <- alan_tablo[,2]
 
 chisq.test(pois_tablo[,3],pois_tablo[,4])
 
+hist(alan_verisi$Birey, xlab = "Birey Sayisi", ylab = "Frekans",
+     main = "")
