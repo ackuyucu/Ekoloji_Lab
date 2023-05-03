@@ -1,19 +1,16 @@
 # Verileri okuyun
-Bryo_data <- read.csv("c:/Work_space/work/presentation/ders/bolum_5/water_flea/Miehls et al. Evol Appl Data.csv",header = TRUE)
+par(mfrow = c(1,1))
+Bryo_data <- read.csv("Data/Bryo.csv",header = TRUE)
 head(Bryo_data)
 names(Bryo_data)
 
 # verileri duzenlemek
-Bryo_data$Depth <- factor(Bryo_data$Depth.m.)
+Bryo_data$Depth <- factor(Bryo_data$Depth)
 Bryo_data <- na.omit(Bryo_data)
 
 # Distal igne uzunlugu histogramlari
-with(Bryo_data,hist(Distal_Spine.mm.))
-with(Bryo_data,hist(Body.mm.))
-Bryo_data <- Bryo_data[,c("Body.mm.","Distal_Spine.mm.","Depth")]
-
-# isimleri daha kolay isimler ile degistir
-names(Bryo_data)<- c("Body_length","Spine_length","Depth")
+with(Bryo_data,hist(Spine_length))
+with(Bryo_data,hist(Body_length))
 
 with(Bryo_data,boxplot(Body_length~Depth,xlab = "Derinlik (metre)", ylab = "Vucut Uzunlugu (mm)",col = "red"))
 
@@ -27,7 +24,6 @@ with(Bryo_data,boxplot(Spine_length~Depth,
                        xlab = "Derinlik (metre)", ylab = "Diken Uzunlugu (mm)",col = "blue"))
 
 
-par(mfrow = c(1,1))
 
 # Korelasyon
 cor(Bryo_data$Body_length,Bryo_data$Spine_length)
@@ -48,13 +44,17 @@ abline(model_1, col = "red")
 mg_45 <- subset(Bryo_data,Depth==45)
 mg_60 <- subset(Bryo_data,Depth==60)
 
-with(data = mg_45, hist(Body_length,xlab = "V.uzunlugu (mm)", col = "blue", 
+par(mfrow = c(1,2))
+with(data = mg_45, hist(Body_length,xlab = "V.uzunlugu (mm)", col = "red", 
                         main = "45 metre"))
-with(data = mg_60, hist(Body_length,xlab = "V.uzunlugu (mm)", col = "red",
+with(data = mg_60, hist(Body_length,xlab = "V.uzunlugu (mm)", col = "blue",
                         main = "60 metre"))
 
-with(data = mg_45, hist(Spine_length,xlab = "D.uzunlugu (mm)", col = "blue",
+with(data = mg_45, hist(Spine_length,xlab = "D.uzunlugu (mm)", col = "red",
                         main = "45 metre"))
+
+with(data = mg_60, hist(Spine_length,xlab = "D.uzunlugu (mm)", col = "blue",
+                        main = "60 metre"))
 
 # 45 metre grubu icin korelasyon ve grafik
 
