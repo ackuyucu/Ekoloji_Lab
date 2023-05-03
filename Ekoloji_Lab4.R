@@ -1,6 +1,6 @@
 # Grup numaraniza gore set.seed() belirleyin
 
-set.seed(14)
+set.seed(123)
 
 Random_sample <- sample(1:100,size = 30,replace = F)
 
@@ -9,7 +9,6 @@ Random_sample
 
 # Öncelikli olarak alan verisinin okunması verilerinizi öncelikli olarak
 # Alan_tablo.csv içerisine kaydedin
-
 
 alan_verisi <- read.csv("Data/Alan_tablo.csv")
 
