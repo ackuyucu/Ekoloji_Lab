@@ -1,39 +1,39 @@
 # Verileri okuyun
 par(mfrow = c(1,1))
-Bryo_data <- read.csv("Data/Bryo.csv",header = TRUE)
-head(Bryo_data)
-names(Bryo_data)
+Bytho_data <- read.csv("Data/Bytho.csv",header = TRUE)
+head(Bytho_data)
+names(Bytho_data)
 
 # verileri duzenlemek
-Bryo_data$Depth <- factor(Bryo_data$Depth)
-Bryo_data <- na.omit(Bryo_data)
+Bytho_data$Depth <- factor(Bytho_data$Depth)
+Bytho_data <- na.omit(Bytho_data)
 
 # Distal igne uzunlugu histogramlari
-with(Bryo_data,hist(Spine_length))
-with(Bryo_data,hist(Body_length))
+with(Bytho_data,hist(Spine_length))
+with(Bytho_data,hist(Body_length))
 
-with(Bryo_data,boxplot(Body_length~Depth,xlab = "Derinlik (metre)", ylab = "Vucut Uzunlugu (mm)",col = "red"))
+with(Bytho_data,boxplot(Body_length~Depth,xlab = "Derinlik (metre)", ylab = "Vucut Uzunlugu (mm)",col = "red"))
 
 # Derinlige bagli olarak vucut uzunlugu karsilastirmasi
-t.test(Bryo_data$Body_length~Bryo_data$Depth)
-sd(subset(Bryo_data,Depth == 45)$Body_length)
-sd(subset(Bryo_data,Depth == 60)$Body_length)
+t.test(Bytho_data$Body_length~Bytho_data$Depth)
+sd(subset(Bytho_data,Depth == 45)$Body_length)
+sd(subset(Bytho_data,Depth == 60)$Body_length)
 
 # Diken uzunlugu
-with(Bryo_data,boxplot(Spine_length~Depth,
+with(Bytho_data,boxplot(Spine_length~Depth,
                        xlab = "Derinlik (metre)", ylab = "Diken Uzunlugu (mm)",col = "blue"))
 
 
 
 # Korelasyon
-cor(Bryo_data$Body_length,Bryo_data$Spine_length)
-cor.test(Bryo_data$Body_length,Bryo_data$Spine_length)
+cor(Bytho_data$Body_length,Bytho_data$Spine_length)
+cor.test(Bytho_data$Body_length,Bytho_data$Spine_length)
 
-plot(Bryo_data$Body_length, Bryo_data$Spine_length,
+plot(Bytho_data$Body_length, Bytho_data$Spine_length,
       xlab = "Vucut uzunlugu", ylab = "Diken uzunlugu")
 
 # Lineer regresyon
-model_1 <- lm(data = Bryo_data, Spine_length ~ Body_length)
+model_1 <- lm(data = Bytho_data, Spine_length ~ Body_length)
 
 summary(model_1)
 
@@ -41,8 +41,8 @@ abline(model_1, col = "red")
 
 
 # Peki gruplarin kendi icinde durum nedir
-mg_45 <- subset(Bryo_data,Depth==45)
-mg_60 <- subset(Bryo_data,Depth==60)
+mg_45 <- subset(Bytho_data,Depth==45)
+mg_60 <- subset(Bytho_data,Depth==60)
 
 par(mfrow = c(1,2))
 with(data = mg_45, hist(Body_length,xlab = "V.uzunlugu (mm)", col = "red", 
