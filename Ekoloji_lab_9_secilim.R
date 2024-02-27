@@ -1,4 +1,4 @@
-# Burada kullanılacak olan grafikler ggplot2 paketinin yüklenmesini gerektirmektedir.
+# Burada kullanılacak olan grafikler ggplot2 paketinin yüklenmesini gerektirmektedir. Eger tidyverse yuklu ise dikkate almayin
 
 # ggplot2 paketinin yüklenmesi için
 
@@ -17,6 +17,7 @@ library(ggplot2)
 # Öncelikli olarak simulasyonumuz için gerekli fonksiyonları oluşturuyoruz
 # İlkin populasyon, fonksiyon içerisine iki argüman almaktadır, örneklem büyüklüğü ve A'nın frekansı
 # set seed fonksiyonu oluşturduğunuz random simülasyonu tekrar oluşturmanızı sağlar
+
 set.seed(14)
 
 primary <- function(sample_size,freq_A = 0.1){
