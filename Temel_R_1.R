@@ -6,7 +6,7 @@
 
 3 * (4 - 1)
 
-4^2
+4^0.5
 
 # öncelik sırası: ) , ^ , * ya da / , + ya da -
 
@@ -82,7 +82,7 @@ x
 
 x > 15 
 
-x == 15
+over_15 <- (x == 15)
 
 x != 15
 
@@ -211,7 +211,7 @@ summary(iris_data)
 
 names(iris_data)
 
-iris_data$Sepal.Length
+iris_data$Sepal.Width
 
 # Veri secimi
 

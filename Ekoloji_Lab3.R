@@ -28,7 +28,7 @@ Kuadrat_sample_30
 # Data klasörü içindeki Ekoloji_lab3_veri.csv dosyasına kaydedin
 # Verilerin okunması
 
-orneklem_veri <- read.csv("Data/Ekoloji_lab3_veri.csv")
+orneklem_veri <- read.csv("Data/Ekoloji_lab3_veri.csv", sep = ",")
 
 # Kuadrat verilerinin alınması
 
