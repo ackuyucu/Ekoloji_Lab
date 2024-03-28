@@ -2,7 +2,7 @@
 
 # Grup numaraniza gore set.seed() belirleyin
 
-set.seed(14)
+set.seed(234)
 
 
 transekt_sample_3 <- sample(1:100,size = 3,replace = F)
@@ -65,7 +65,7 @@ t.test(transekt_3,transekt_6,alternative = "two.sided", paired = FALSE)
 
 # Burada birlesik verileri kullaniyoruz
 
-birlesik_veri <- read.csv2("Data/Ekoloji_lab3_birlesik_veri.csv")
+birlesik_veri <- read.csv2("Data/Ekoloji_lab3_birlesik_veri.csv", sep = ",")
 
 # Kuadrat verilerinin alınması A alanı
 

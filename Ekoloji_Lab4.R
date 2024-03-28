@@ -10,7 +10,7 @@ Random_sample
 # Öncelikli olarak alan verisinin okunması verilerinizi öncelikli olarak
 # Alan_tablo.csv içerisine kaydedin
 
-alan_verisi <- read.csv("Data/Alan_tablo.csv")
+alan_verisi <- read.csv("Data/Alan_tablo.csv", sep = ",")
 
 summary(alan_verisi)
 
@@ -47,6 +47,8 @@ pois_tablo[,2] <- (f_ort^(alan_tablo[,1])/(exp(f_ort)*factorial(alan_tablo[,1]))
 pois_tablo[,3] <- pois_tablo[,2]*f_sum
 
 pois_tablo[,4] <- alan_tablo[,2]
+
+pois_tablo
 
 # Gözlenen ve beklenen değerler için ki kare testi
 

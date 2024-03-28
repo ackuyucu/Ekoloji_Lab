@@ -77,7 +77,7 @@ frequency <- function(pop,generation){
 # Simulasyonların başlangıcı
 # Model 1 seçilimin olmadığı bir durumun modellenmesi tüm genotiplerin 
 # hayatta kalma olasılığı birbirine eşittir
-pop_1 <- Selection(sample_size = 200,
+pop_1 <- Selection(sample_size = 1000,
                    freq_A = 0.4,sel_coef = c(1,1,1),generations = 1:5)
 
 
@@ -102,10 +102,31 @@ ggplot(pop_1,aes(x=Generation,fill = Inds)) +
 freq_model_1 <- frequency(pop_1,5)
 print(freq_model_1)
 
+# hardy Weinberg beklentisi
+
+freq_AA <- freq_model_1$A^2
+
+freq_Aa <-  2*freq_model_1$A*freq_model_1$a
+
+freq_aa <-  freq_model_1$a^2
+
+# Beklenen değerler
+
+freq_AA
+freq_Aa
+freq_aa
+
+beklenen_deger <- c(freq_aa,freq_Aa,freq_AA)
+gozlenen_deger <- table_change[,6]/1000
+
+# Ki kare testi
+
+chisq.test(beklenen_deger,gozlenen_deger)
+
 
 
 # Model 2  endüstri devrimi öncesi koyu renklilere karşı seçilim baskısı
-pop_2 <- Selection(sample_size = 200,
+pop_2 <- Selection(sample_size = 1000,
                             freq_A = 0.4,sel_coef = c(0.6,0.8,1),generations = 1:5)
 
 
@@ -142,7 +163,7 @@ print(freq_model_2)
 
 freq_A <- freq_model_2[1,1]
 
-pop_3 <- Selection(sample_size = 200, freq_A, sel_coef = c(1,0.8,0.6),
+pop_3 <- Selection(sample_size = 1000, freq_A, sel_coef = c(1,0.8,0.6),
                     generations = 1:5)
 
 # Genotip sayılarının değişim tablosu
