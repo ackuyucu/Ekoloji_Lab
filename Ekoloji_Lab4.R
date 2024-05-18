@@ -10,7 +10,7 @@ Random_sample
 # Öncelikli olarak alan verisinin okunması verilerinizi öncelikli olarak
 # Alan_tablo.csv içerisine kaydedin
 
-alan_verisi <- read.csv("Data/Alan_tablo.csv", sep = ",")
+alan_verisi <- read.csv("Data/Alan_tablo.csv", sep = ";")
 
 summary(alan_verisi)
 
