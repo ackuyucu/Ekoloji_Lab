@@ -1,6 +1,6 @@
 # 1. kısım grup verilerinin değerlendirilmesi
 # Verilerin okunması
-balik_veri <- read.csv2("Data/Bolum5_balik.csv",header = TRUE,skip = 1)
+balik_veri <- read.csv2("Data/Bolum5_balik.csv",header = TRUE,skip = 1, sep = ";")
 
 # Hamsi vücut uzunluğu ve Vücut genişliği değerlerinin özetlenmesi
 # Min:en düşük değer
