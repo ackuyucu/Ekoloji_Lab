@@ -28,7 +28,7 @@ Kuadrat_sample_30
 # Data klasörü içindeki Ekoloji_lab3_veri.csv dosyasına kaydedin
 # Verilerin okunması
 
-orneklem_veri <- read.csv("Data/Ekoloji_lab3_veri.csv", sep = ",")
+orneklem_veri <- read.csv("Data/Ekoloji_lab3_veri.csv", sep = ";")
 
 # Kuadrat verilerinin alınması
 
@@ -65,7 +65,7 @@ t.test(transekt_3,transekt_6,alternative = "two.sided", paired = FALSE)
 
 # Burada birlesik verileri kullaniyoruz
 
-birlesik_veri <- read.csv2("Data/Ekoloji_lab3_birlesik_veri.csv", sep = ",")
+birlesik_veri <- read.csv2("Data/Ekoloji_lab3_birlesik_veri.csv", sep = ";")
 
 # Kuadrat verilerinin alınması A alanı
 
