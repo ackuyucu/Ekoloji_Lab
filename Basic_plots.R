@@ -1,4 +1,18 @@
-rep_data <- read.csv("c:/Work_space/work/HU_research/kertenkele/last_data/Analiz/rep_data_son.csv",header = TRUE)
+data_path <- file.path("Data", "rep_data_son.csv")
+if (file.exists(data_path)) {
+  rep_data <- read.csv(data_path, header = TRUE)
+} else {
+  set.seed(42)
+  rep_data <- data.frame(
+    Substrate = sample(c("Rock", "Soil", "Leaf"), 120, replace = TRUE),
+    Body_temp = rnorm(120, mean = 28, sd = 3),
+    Solar_rad = runif(120, min = 200, max = 1000),
+    Species = sample(c("Lacerta_trilineata", "Parvilacerta_parva"), 120, replace = TRUE),
+    Ts = rnorm(120, mean = 26, sd = 2),
+    Ta = rnorm(120, mean = 25, sd = 2),
+    Tex = rnorm(120, mean = 4, sd = 1)
+  )
+}
 rep_data$Substrate <- as.factor(rep_data$Substrate)
 
 
@@ -93,6 +107,4 @@ with(airquality, {
   plot(Temp, Ozone, main = "Ozone and Temperature")
   mtext("Ozone and Weather in New York City", outer = TRUE)
 })
-
-
 

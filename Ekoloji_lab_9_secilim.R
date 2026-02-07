@@ -1,8 +1,6 @@
 # Burada kullanılacak olan grafikler ggplot2 paketinin yüklenmesini gerektirmektedir. Eger tidyverse yuklu ise dikkate almayin
 
-# ggplot2 paketinin yüklenmesi için
-
-install.packages("ggplot2")
+# ggplot2 paketinin yüklenmesi için (bir kez kurduktan sonra tekrar gerekmez)
 
 # ggplot2 bir kere yüklendikten sonra yukarıdaki komutu çalıştırmanıza gerek yoktur
 
@@ -187,4 +185,3 @@ ggplot(pop_3,aes(x=Generation,fill = Inds)) +
 # 5. kuşaktaki allel frekansları, A alleli ve a alleli
 freq_model_3 <- frequency(pop_3,5)
 print(freq_model_3)
-
