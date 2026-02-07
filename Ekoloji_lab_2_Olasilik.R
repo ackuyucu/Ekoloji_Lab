@@ -12,13 +12,10 @@ pbinom(q = 17,size = 48,prob = 0.5,lower.tail = TRUE)
 
 dbinom(x = 17,prob = 0.5,size = 48)
 
-egg_probs <- data.frame()
-
-for(i in 0:50){
-        Prob = data.frame("Prob"= dbinom(x = i,prob = 0.9,size = 48),"Eggs" = i)
-        egg_probs <- rbind(egg_probs,Prob)
-        
-}
+egg_probs <- data.frame(
+        Eggs = 0:48,
+        Prob = dbinom(x = 0:48, prob = 0.9, size = 48)
+)
 
 barplot(height = egg_probs$Prob,main = "Yumurta Dişi/Erkek Olasılıkları",
         ylab = "Olasılıklar",xlab="Yumurta Sayıları",names = egg_probs$Eggs,
@@ -29,5 +26,4 @@ pbinom(q = 23,size = 48,prob = 0.5,lower.tail = TRUE)
 
 # Yukarıdaki q değerini değiştirerek istediğiniz sayıdaki
 # erkek oranına bakabilirsiniz
-
 

@@ -1,6 +1,7 @@
 library(datasets)
 head(iris)
 summary(iris$Species)
+iris_data <- iris
 
 # Temel grafikler
 
@@ -44,7 +45,7 @@ hist(versicolor_data$Petal.Length,main = "Histogram",
 
 # Daha da iyi grafikler !
 
-library("tidyverse")
+library(ggplot2)
 
 ggplot(data = iris_data, aes(y = Petal.Length, x = Species)) +
   geom_boxplot(aes(fill = Species))

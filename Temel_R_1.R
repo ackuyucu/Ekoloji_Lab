@@ -191,9 +191,7 @@ data1 <- data.frame(foo = 1:4,bar = c(TRUE,TRUE,FALSE,FALSE))
 
 data1
 
-# Örnek paket yükleme
-
-install.packages("datasets")
+# Örnek paket yükleme (gerekli değil; datasets varsayılan olarak gelir)
 
 # Hazır veri setleri
 
