@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+.venv
+venv/
+env/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Generated outputs (not needed in repo)
+*.xlsx
+*.png
+*.txt
+!requirements.txt
+!README.md
