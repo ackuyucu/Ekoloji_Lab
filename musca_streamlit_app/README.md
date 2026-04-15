@@ -36,7 +36,7 @@ sheets) and plain-text parameter summary.
 ### Option A — Run in Google Colab (no install needed)
 
 Click the badge above, or open `colab_launcher.ipynb` directly.  
-You will need a free [ngrok](https://ngrok.com) account for the tunnel.
+No account, no token, no sign-up required — uses Cloudflare Tunnel automatically.
 
 ### Option B — Run locally
 

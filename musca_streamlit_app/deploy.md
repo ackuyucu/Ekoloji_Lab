@@ -36,26 +36,20 @@ git push
 ## 3. Run in Google Colab
 
 Open `colab_launcher.ipynb` in Colab (or click the badge in README.md).
+**No account, no token, no sign-up required.**
 
 **What the notebook does:**
 
 | Cell | Action |
 |------|--------|
-| 1 | Clones ackuyucu/Ekoloji_Lab and installs dependencies |
-| 2 | Configures your free ngrok auth token |
-| 3 | Starts Streamlit + opens a public tunnel → prints the URL |
-| 4 | Shuts everything down when you're finished |
+| 1 | Clones ackuyucu/Ekoloji_Lab, installs dependencies, downloads cloudflared |
+| 2 | Starts Streamlit + opens a Cloudflare Tunnel → prints a clickable URL |
+| 3 | (Optional) Shuts everything down when you are finished |
 
-**Getting a free ngrok token:**
-1. Sign up at https://ngrok.com (no credit card)
-2. Go to Dashboard → *Your Authtoken*
-3. Copy the token and paste it into Cell 2
-
-The tunnel URL looks like `https://xxxx.ngrok-free.app` and stays live
-for as long as your Colab session is running (up to ~2 hours on free tier).
-
-**No ngrok account?** Use the localtunnel fallback code shown in the
-notebook's Troubleshooting section — no signup required.
+The public URL looks like `https://xxxx.trycloudflare.com` and stays live
+for the duration of your Colab session. Powered by
+[Cloudflare Tunnel](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/do-more-with-tunnels/trycloudflare/) —
+completely free, no account needed.
 
 ---
 
