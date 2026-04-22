@@ -1,0 +1,10 @@
+name: musca_shiny_app_tr
+title:
+username: ackuyucu
+account: ackuyucu
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 17179290
+bundleId: 11877955
+url: https://ackuyucu.shinyapps.io/musca_shiny_app_tr/
+version: 1
